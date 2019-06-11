@@ -90,16 +90,12 @@ public class MyExcel {
         Cell cell = row.getCell(columnNum);
 
         if (cell != null) {
-            switch (evaluator.evaluateFormulaCell(cell)) {
-                case Cell.CELL_TYPE_NUMERIC:
+            cell.getCellType();
+            switch (cell.getCellType()) {
+                case FORMULA:
+                case NUMERIC:
                     return cell.getNumericCellValue() +"";
-                case Cell.CELL_TYPE_STRING:
-                    return cell.getStringCellValue();
-            }
-            switch (row.getCell(columnNum).getCellType()) {
-                case HSSFCell.CELL_TYPE_NUMERIC:
-                    return cell.getNumericCellValue() +"";
-                case HSSFCell.CELL_TYPE_STRING:
+                case STRING:
                     return cell.getStringCellValue();
             }
         }
