@@ -9,7 +9,8 @@ import static Petplan.PolicyPlan.*;
 public class CRF {
     public Policy policy;
     public MyExcel excel;
-    public String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Blueprint (Rates) 20190423 0525 pm.xlsx";
+    //public String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Blueprint (Rates) 20190423 0525 pm.xlsx";
+    public String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\Blueprint - US (Rates) 20190703 0850 am.xlsx";
 
     public CRF() {
         Thread thread = new Thread("New Thread") {
